@@ -20,8 +20,7 @@ public class Main {
             System.out.print(counter++ + " ");
         }
         System.out.println();
-        counter = 10;
-        while (counter >= 1) {
+        for (counter = 10; counter >= 1;) {
             System.out.print(counter-- + " ");
         }
         System.out.println();
@@ -87,6 +86,7 @@ public class Main {
                 System.out.println(year);
             }
             year++;
-        };
+        }
+        ;
     }
 }
