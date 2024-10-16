@@ -1,9 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        String divider = "-------------------------------------";
+        String divider = " -------------------------------------";
 
-        System.out.println(divider);
-        System.out.println("Задача #1");
+        System.out.printf("%nЗадача #%d %s%n", 1, divider);
         /*final*/
         double savingsTarget = 2_459_000;
         /*final*/
@@ -12,12 +11,10 @@ public class Main {
         int month = 1;
         while (total < savingsTarget) {
             total += deposit;
-            System.out.printf("Месяц %d, сумма накоплений равна %,.2f рублей", month++, total);
-            System.out.println();
+            System.out.printf("Месяц %d, сумма накоплений равна %,.2f рублей %n", month++, total);
         }
 
-        System.out.println(divider);
-        System.out.println("Задача #2");
+        System.out.printf("%nЗадача #%d %s%n", 2, divider);
         int counter = 1;
         while (counter <= 10) {
             System.out.print(counter++ + " ");
@@ -29,73 +26,58 @@ public class Main {
         }
         System.out.println();
 
-        System.out.println(divider);
-        System.out.println("Задача #3");
+        System.out.printf("%nЗадача #%d %s%n", 3, divider);
         final double birthRate = 17.0 / 1000;
         final double mortalityRate = 8.0 / 1000;
         double population = 12_000_000;
         int year = 1;
         while (year <= 10) {
             population *= (1 + (birthRate - mortalityRate));
-            System.out.printf("Год %d, численность населения составляет %,.3f", year, population);
-            System.out.println();
-            year++;
+            System.out.printf("Год %d, численность населения составляет %,.3f %n", year++, population);
         }
-        System.out.println();
 
-        System.out.println(divider);
-        System.out.println("Задача #4");
+        System.out.printf("%nЗадача #%d %s%n", 4, divider);
         savingsTarget = 12_000_000;
         final double perMonthPercent = 0.07;
         total = deposit;
         month = 1;
         while (total < savingsTarget) {
             total += total * perMonthPercent;
-            System.out.printf("Месяц %d, сумма накоплений равна %,.2f рублей", month++, total);
-            System.out.println();
+            System.out.printf("Месяц %d, сумма накоплений равна %,.2f рублей %n", month++, total);
         }
-        System.out.println();
 
-        System.out.println(divider);
-        System.out.println("Задача #5");
+        System.out.printf("%nЗадача #%d %s%n", 5, divider);
         total = deposit;
         month = 1;
         while (total < savingsTarget) {
             total += total * perMonthPercent;
             if (month % 6 == 0) {
-                System.out.printf("Месяц %d, сумма накоплений равна %,.2f рублей", month, total);
-                System.out.println();
+                System.out.printf("Месяц %d, сумма накоплений равна %,.2f рублей %n", month, total);
             }
             month++;
         }
-        System.out.println();
 
-        System.out.println(divider);
-        System.out.println("Задача #6");
+        System.out.printf("%nЗадача #%d %s%n", 6, divider);
         total = deposit;
         month = 1;
         int monthMax = 12 * 9;
         while (month <= monthMax) {
             total += total * perMonthPercent;
             if (month % 6 == 0) {
-                System.out.printf("Месяц %d, сумма накоплений равна %,.2f рублей", month, total);
-                System.out.println();
+                System.out.printf("Месяц %d, сумма накоплений равна %,.2f рублей %n", month, total);
             }
             month++;
         }
-        System.out.println();
 
-        System.out.println(divider);
-        System.out.println("Задача #7");
+        System.out.printf("%nЗадача #%d %s%n", 7, divider);
         final int daysPerMonth = 31;
         int reportingDay = 3; // отчётный день, [первая, сегодня] пятница месяца
         do {
-            System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отчёт%n", reportingDay);
+            System.out.printf("Сегодня пятница, %d-е число. Необходимо подготовить отчёт %n", reportingDay);
             reportingDay += 7;
         } while (reportingDay <= daysPerMonth);
 
-        System.out.println(divider);
-        System.out.println("Задача #8");
+        System.out.printf("%nЗадача #%d %s%n", 8, divider);
         final int cometPeriod = 79;
         final int baseYear = 2024;
         final int yearInFuture = baseYear + 100;
